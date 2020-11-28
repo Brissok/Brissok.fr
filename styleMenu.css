@@ -62,7 +62,6 @@ svg {
     left: 0;
     padding-left: 1rem;
     background-color: rgba(0, 0, 0, 0.9);
-    color: #9f9f9f;
     box-shadow: 0 4px 30px rgba(0, 0, 0, .05);
     z-index: 1;
     transition: all 1s;
@@ -79,6 +78,12 @@ svg {
     transition: all .2s;
     box-shadow: none;
 }
+
+.menu li a {
+    text-decoration: none;
+    color: #9f9f9f;
+}
+
 .menu li::before {
     display: inline-block;
     vertical-align: middle;
@@ -88,7 +93,7 @@ svg {
     background-color: #9F9F9F;
     margin-right: 15px;
 }
-.menu li:hover {
+.menu li a:hover {
     color: var(--green);
     cursor: pointer;
 }

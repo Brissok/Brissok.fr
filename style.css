@@ -19,7 +19,6 @@ body {
 
 a {
     text-decoration: none;
-    color: inherit;
 }
 
 p {
@@ -39,9 +38,18 @@ ul {
     border-color: var(--green);
 }
 
+.btn-primary:hover {
+    color: #fff;
+    background-color: var(--green);
+    border-color: var(--green);
+    opacity: 0.9;
+}
+
 .btn-outline-primary {
     border-color: var(--green);
     color: var(--green);
+    margin-right: 0.5em;
+    margin-bottom: 0.25em;
 }
 .btn-outline-primary:hover {
         color: #fff;
@@ -92,6 +100,7 @@ header {
 }
 
 .topbar nav a {
+    text-decoration: none;
     position: relative;
     color: #9f9f9f;
     font-weight: 500;
@@ -247,6 +256,7 @@ h2 {
 
 .source-project {
     font-size: small;
+    white-space: nowrap;
 }
 
 h5 {
@@ -457,6 +467,14 @@ button, input {
 .about {
     flex-grow: 1;
     padding: 0 1rem;
+}
+.about a {
+    color: #fff;
+    text-decoration: none;
+}
+.about a:hover {
+    color: var(--green);
+    
 }
 .contact {
     flex-grow: 2;
