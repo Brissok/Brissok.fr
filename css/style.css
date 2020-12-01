@@ -1,0 +1,689 @@
+
+:root{
+    --blue : #2e3072;
+    --green : rgb(0, 194, 154);
+    --text-green : #1fdea6;
+    --turquoise : #00aead;
+    --background: rgb(30, 31, 70);
+    --insert-blue: #2a4067;
+    --violet: #a75fce;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    color: rgba(0, 0, 0, .87);
+    font-family: "Roboto", sans-serif;
+    line-height: 1.4;
+    margin: 0em;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.btn-brissok{color:#fff;background-color:var(--green);border-color:var(--green)}
+.btn-brissok:hover{color:#fff;background-color:var(--green);border-color:var(--green)}
+.btn-brissok.focus,.btn-brissok:focus{color:#fff;background-color:var(--green);border-color:var(--green);box-shadow:0 0 0 .2rem rgba(0, 194, 154,.5)}
+.btn-brissok.disabled,.btn-brissok:disabled{color:#fff;background-color:var(--green);border-color:var(--green)}
+.btn-brissok:not(:disabled):not(.disabled).active,.btn-brissok:not(:disabled):not(.disabled):active,.show>.btn-brissok.dropdown-toggle{color:#fff;background-color:var(--green);border-color:var(--green)}
+.btn-brissok:not(:disabled):not(.disabled).active:focus,.btn-brissok:not(:disabled):not(.disabled):active:focus,.show>.btn-brissok.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(0, 194, 154,.5)}
+
+.btn-outline-brissok{color:var(--green);border-color:var(--green)}
+.btn-outline-brissok:hover{color:#fff;background-color:var(--green);border-color:var(--green)}
+.btn-outline-brissok.focus,.btn-outline-brissok:focus{box-shadow:0 0 0 .2rem rgba(0, 194, 154,.5)}.btn-outline-brissok.disabled,.btn-outline-brissok:disabled{color:var(--green);background-color:transparent}
+.btn-outline-brissok:not(:disabled):not(.disabled).active,.btn-outline-brissok:not(:disabled):not(.disabled):active,.show>.btn-outline-brissok.dropdown-toggle{color:#fff;background-color:var(--green);border-color:var(--green)}
+.btn-outline-brissok:not(:disabled):not(.disabled).active:focus,.btn-outline-brissok:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-brissok.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(0, 194, 154,.5)}
+
+header {
+    height: auto;
+}
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.7rem;
+    z-index: 4;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, .05);
+}
+.topbar_white {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.7rem;
+    z-index: 4;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, .05);
+    background-color: #fff;
+}
+
+.topbar nav {
+    left: 100px;
+    text-align: center;
+    z-index: 2;
+}
+.topbar_white nav {
+    left: 100px;
+    text-align: center;
+    z-index: 2;
+}
+
+.topbar nav a {
+    text-decoration: none;
+    position: relative;
+    color: #9f9f9f;
+    font-weight: 500;
+    padding: 0.5rem 0 0.5rem;
+    margin: 0 1.5rem;
+    text-transform: uppercase;
+}
+.topbar_white nav a {
+    position: relative;
+    color: #9f9f9f;
+    font-weight: 500;
+    padding: 0.5rem 0 0.5rem;
+    margin: 0 1.5rem;
+    text-transform: uppercase;
+}
+
+.topbar nav a:hover, .topbar nav a.active {
+    color: var(--green);
+    transition: color .3s;
+}
+.topbar_white nav a:hover, .topbar_white nav a.active {
+    color: black;
+    transition: color .3s;
+}
+
+.topbar nav a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: 50% 50%;
+    width: 100%;
+    height: 1px;
+    background-color: var(--green);
+    transition: transform 250ms;
+}
+.topbar_white nav a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: 50% 50%;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    transition: transform 250ms;
+}
+
+.topbar nav a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+.topbar_white nav a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.topbar .social {
+    float: right;
+}
+.topbar_white .social {
+    float: right;
+}
+
+.social a {
+    padding: 0 5px;
+}
+
+.social svg {
+    fill: #9f9f9f;
+    width: 20px;
+    height: 20px;
+}
+
+.topbar .social svg:hover {
+    fill: var(--green);
+}
+.topbar_white .social svg:hover {
+    fill: black;
+}
+
+.main_menu li {
+	display: inline-flex;
+}
+
+.banniere {
+    height: fit-content;
+    background-color: rgb(0, 0, 35);
+    background-image: linear-gradient(rgba(30, 31, 70, 0.75) 0%, rgba(30, 31, 70, 0.95) 100%), url(../img/joshua-aragon-EaB4Ml7C7fE-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.banniere-container {
+    margin: 0 auto;
+    padding-top: 120px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.big-title {
+    font-size: 3em;
+    color: #fff;
+}
+
+.banniere-baseline {
+    color: #fff;
+    font-size: 1.8em;
+}
+
+.banniere-container svg {
+    height: 20px;
+    width: auto;
+    margin: 0 5px;
+    fill: #fff;
+}
+
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    color: #fff;
+}
+.banniere-button {
+    margin: 2rem auto 3rem;
+    font-size: 1.5rem;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+.banniere-logos img {
+    margin: 0 20px 20px;
+}
+
+.main-title {
+    width: 900px;
+    margin: 0 20px;
+}
+
+.main-title::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 900px;
+    max-width: 1160px;
+    background-color: black;
+}
+
+.source-project {
+    font-size: small;
+    white-space: nowrap;
+}
+
+h5 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    margin-top: 0;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.sidebar {
+    position: relative;
+    background: #f8f8f8;
+    width: 250px;
+    padding: 40px;
+    z-index: 1;
+    height: fit-content;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, .05);
+}
+
+.sidebar-title {
+    font-size: 20px;
+    color: black;
+    margin: 15px 0;
+}
+
+.sidebar-title:first-child {
+    margin-top: 0;
+}
+
+.sidebar a {
+    color: #9f9f9f;
+}
+
+.sidebar a:hover {
+    color: black;
+}
+
+.sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 15px;
+}
+
+.sidebar li {
+    padding: 6px 0;
+}
+
+.sidebar li:first-child {
+    padding-top: 0;
+}
+
+.sidebar li:last-child {
+    padding-bottom: 0;
+}
+
+.sidebar hr {
+    border: none;
+    background: #9f9f9f;
+    height: 1px;
+    margin: 10px 0;
+}
+.fixed {
+    position: sticky;
+    top: 63px;
+    float: right;
+}
+
+.article {
+    margin: 20px auto;
+    max-width: 800px;
+    min-height: 180px;
+    padding: 0 20px;
+}
+
+.article-img {
+    margin: 20px 20px 0 0;
+    float: left;
+}
+
+.article-img:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.article-date {
+    padding-top: 17px;
+    font-size: 12px;
+    color: #9F9F9F;
+}
+
+.article-title {
+    margin: 0;
+}
+
+.article p {
+    margin-top: 0;
+}
+
+
+.form {
+    padding: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+    height: 500px;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    color: black;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+button, input {
+    overflow: visible;
+}
+.text-muted {
+    color: #6c757d!important;
+}
+.form-text {
+    display: block;
+    margin-top: .25rem;
+}
+.small, small {
+    font-size: 80%;
+    font-weight: 400;
+}
+.form-check {
+    position: relative;
+    display: block;
+    padding-left: 1.25rem;
+}
+
+.bd-example::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.footer {
+    clear: both;
+}
+.footer section {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #fff;
+    padding: 3rem 2rem;
+}
+.footer-photo img {
+    border-radius: 50%;
+}
+
+.about a {
+    color: black;
+    text-decoration: none;
+}
+.about a:hover {
+    color: var(--green);
+    
+}
+
+#footer-baseline {
+    color: #9F9F9F;
+    background-color: var(--background);
+}
+
+h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--green);
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+}
+h6::after {
+    display: block;
+    content: '';
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    background-color: rgb(90, 90, 90);
+    margin-top: 1rem;
+}
+.about li {
+    color: #fff;
+}
+.about li:hover {
+    color: var(--green);
+}
+
+.bg-skills {
+    background-color: var(--background);
+    background-image: linear-gradient(229deg, var(--background) 0%,var(--blue) 42%,var(--background) 100%);
+    color: #fff;
+}
+.skills-title {
+    color: var(--text-green);
+}
+.top-insert-path {
+    width: 100%;
+    height: 5px;
+    background-color: var(--text-green);
+}
+.skills-insert {
+    background-color: var(--insert-blue);
+}
+
+.list-group-item {
+    background-color: transparent;
+}
+
+
+progress:not(value) {
+	/* Add your styles here. As part of this walkthrough we will focus only on determinate progress bars. */
+}
+
+/* Styling the determinate progress element */
+
+progress[value] {
+	/* Get rid of the default appearance */
+	appearance: none;
+	
+	/* This unfortunately leaves a trail of border behind in Firefox and Opera. We can remove that by setting the border to none. */
+	border: none;
+	
+	/* Add dimensions */
+	width: 100%; height: 10px;
+	
+	/* Although firefox doesn't provide any additional pseudo class to style the progress element container, any style applied here works on the container. */
+	  background-color: whiteSmoke;
+	  border-radius: 3px;
+	  box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+	
+	/* Of all IE, only IE10 supports progress element that too partially. It only allows to change the background-color of the progress value using the 'color' attribute. */
+	color: royalblue;
+	
+	position: relative;
+	margin: 0 0 1.5em; 
+}
+
+/*
+Webkit browsers provide two pseudo classes that can be use to style HTML5 progress element.
+-webkit-progress-bar -> To style the progress element container
+-webkit-progress-value -> To style the progress element value.
+*/
+
+progress[value]::-webkit-progress-bar {
+	background-color: whiteSmoke;
+	border-radius: 3px;
+	box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+}
+
+progress[value]::-webkit-progress-value {
+	position: relative;
+	
+	background-size: 35px 20px, 100% 100%, 100% 100%;
+	border-radius:3px;
+	
+	/* Let's animate this */
+	animation: animate-stripes 5s linear infinite;
+}
+
+@keyframes animate-stripes { 100% { background-position: -100px 0; } }
+
+/* Let's spice up things little bit by using pseudo elements. */
+
+progress[value]::-webkit-progress-value:after {
+	/* Only webkit/blink browsers understand pseudo elements on pseudo classes. A rare phenomenon! */
+	content: '';
+	position: absolute;
+	
+	width:5px; height:5px;
+	top:7px; right:7px;
+	
+	background-color: white;
+	border-radius: 100%;
+}
+
+/* Firefox provides a single pseudo class to style the progress element value and not for container. -moz-progress-bar */
+
+progress[value]::-moz-progress-bar {
+	/* Gradient background with Stripes */
+	background-image:
+	-moz-linear-gradient( 135deg,
+	transparent,
+	transparent 33%,
+	rgba(0,0,0,.1) 33%,
+	rgba(0,0,0,.1) 66%,
+	transparent 66%),
+    -moz-linear-gradient( top,
+	rgba(255, 255, 255, .25),
+	rgba(0,0,0,.2)),
+     -moz-linear-gradient( left, #09c, var(--green));
+	
+	background-size: 35px 20px, 100% 100%, 100% 100%;
+	border-radius:3px;
+	
+	/* Firefox doesn't support CSS3 keyframe animations on progress element. Hence, we did not include animate-stripes in this code block */
+}
+
+/* Fallback technique styles */
+.progress-bar {
+	background-color: whiteSmoke;
+	border-radius: 3px;
+	box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+
+	/* Dimensions should be similar to the parent progress element. */
+	width: 100%; height:20px;
+}
+
+.progress-bar span {
+	background-color: royalblue;
+	border-radius: 3px;
+	
+	display: block;
+	text-indent: -9999px;
+}
+
+p[data-value] { 
+  
+  position: relative; 
+}
+
+/* The percentage will automatically fall in place as soon as we make the width fluid. Now making widths fluid. */
+
+p[data-value]:after {
+	content: attr(data-value) '%';
+	position: absolute; right:0;
+}
+
+
+
+
+
+.html5::-webkit-progress-value,
+.python::-webkit-progress-value  {
+	/* Gradient background with Stripes */
+	background-image:
+	-webkit-linear-gradient( 135deg,
+	transparent,
+	transparent 33%,
+	rgba(0,0,0,.1) 33%,
+	rgba(0,0,0,.1) 66%,
+	transparent 66%),
+    -webkit-linear-gradient( top,
+    rgba(255, 255, 255, .25),
+    rgba(0,0,0,.2)),
+     -webkit-linear-gradient( left, #09c, var(--green));
+}
+
+.css3::-webkit-progress-value,
+.php::-webkit-progress-value 
+{
+	/* Gradient background with Stripes */
+	background-image:
+	-webkit-linear-gradient( 135deg,
+	transparent,
+	transparent 33%,
+	rgba(0,0,0,.1) 33%,
+	rgba(0,0,0,.1) 66%,
+	transparent 66%),
+    -webkit-linear-gradient( top,
+	rgba(255, 255, 255, .25),
+	rgba(0,0,0,.2)),
+     -webkit-linear-gradient( left, #09c, var(--green));
+}
+
+.jquery::-webkit-progress-value,
+.node-js::-webkit-progress-value 
+{
+	/* Gradient background with Stripes */
+	background-image:
+	-webkit-linear-gradient( 135deg,
+	transparent,
+	transparent 33%,
+	rgba(0,0,0,.1) 33%,
+	rgba(0,0,0,.1) 66%,
+	transparent 66%),
+    -webkit-linear-gradient( top,
+	rgba(255, 255, 255, .25),
+	rgba(0,0,0,.2)),
+     -webkit-linear-gradient( left, #09c,var(--green));
+}
+
+/* Similarly, for Mozillaa. Unfortunately combining the styles for different browsers will break every other browser. Hence, we need a separate block. */
+
+.html5::-moz-progress-bar,
+.php::-moz-progress-bar {
+	/* Gradient background with Stripes */
+	background-image:
+	-moz-linear-gradient( 135deg,transparent,transparent 33%,rgba(0,0,0,.1) 33%,rgba(0,0,0,.1) 66%,transparent 66%),
+    -moz-linear-gradient( top,rgba(255, 255, 255, .25),rgba(0,0,0,.2)),
+    -moz-linear-gradient( left, #09c, var(--green));
+}
+
+.css3::-moz-progress-bar,
+.php::-moz-progress-bar {
+{
+	/* Gradient background with Stripes */
+	background-image:
+	-moz-linear-gradient( 135deg, transparent, transparent 33%, rgba(0,0,0,.1) 33%, rgba(0,0,0,.1) 66%, transparent 66%),
+    -moz-linear-gradient( top, rgba(255, 255, 255, .25), rgba(0,0,0,.2)),
+    -moz-linear-gradient( left, #09c, #ff0);
+}
+
+.jquery::-moz-progress-bar,
+.node-js::-moz-progress-bar {
+    /* Gradient background with Stripes */
+	background-image:
+	-moz-linear-gradient( 135deg,
+	transparent,
+	transparent 33%,
+	rgba(0,0,0,.1) 33%,
+	rgba(0,0,0,.1) 66%,
+	transparent 66%),
+    -moz-linear-gradient( top,
+	rgba(255, 255, 255, .25),
+	rgba(160, 94, 94, 0.2)),
+    -moz-linear-gradient( left, #09c, var(--green));
+}
+
+/* Now we are good to duplicate html code for other skills and then add the css code for the new skill based on data-skill */
+  
+/* THE END */
