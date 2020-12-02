@@ -49,22 +49,11 @@ ul {
 .btn-outline-brissok:not(:disabled):not(.disabled).active,.btn-outline-brissok:not(:disabled):not(.disabled):active,.show>.btn-outline-brissok.dropdown-toggle{color:#fff;background-color:var(--green);border-color:var(--green)}
 .btn-outline-brissok:not(:disabled):not(.disabled).active:focus,.btn-outline-brissok:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-brissok.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(0, 194, 154,.5)}
 
-header {
-    height: auto;
-}
 .topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
     padding: 0.7rem;
-    z-index: 4;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, .05);
+    width: 100%;
 }
+
 .topbar_white {
     display: flex;
     justify-content: space-between;
@@ -80,11 +69,6 @@ header {
     background-color: #fff;
 }
 
-.topbar nav {
-    left: 100px;
-    text-align: center;
-    z-index: 2;
-}
 .topbar_white nav {
     left: 100px;
     text-align: center;
@@ -92,12 +76,9 @@ header {
 }
 
 .topbar nav a {
-    text-decoration: none;
     position: relative;
-    color: #9f9f9f;
     font-weight: 500;
-    padding: 0.5rem 0 0.5rem;
-    margin: 0 1.5rem;
+    margin-right: 0.5em;
     text-transform: uppercase;
 }
 .topbar_white nav a {
@@ -109,7 +90,7 @@ header {
     text-transform: uppercase;
 }
 
-.topbar nav a:hover, .topbar nav a.active {
+.topbar nav a:hover {
     color: var(--green);
     transition: color .3s;
 }
@@ -189,16 +170,14 @@ header {
 
 .banniere-container {
     margin: 0 auto;
-    padding-top: 120px;
-    padding-bottom: 60px;
     text-align: center;
 }
 
 .big-title {
-    font-size: 3em;
+    font-size: 2em;
     color: #fff;
 }
-
+  
 .banniere-baseline {
     color: #fff;
     font-size: 1.8em;
@@ -218,7 +197,7 @@ header {
     color: #fff;
 }
 .banniere-button {
-    margin: 2rem auto 3rem;
+    margin: 2rem auto 2rem;
     font-size: 1.5rem;
     padding-right: 1em;
     padding-left: 1em;
