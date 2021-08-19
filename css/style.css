@@ -222,9 +222,19 @@ ul {
     background-color: black;
 }
 
-.source-project {
+.stack-project {
+    color: var(--text-green);
     font-size: small;
     white-space: nowrap;
+    margin-top: -.375rem;
+    font-size: 1rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.card-subtitle {
+    font-size: .7rem;
 }
 
 h5 {
